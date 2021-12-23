@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/main_page_toolbar"
+            layout="@layout/toolbar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userName"
+            android:text="name"
+            android:textStyle="bold|italic"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userEmail"
+            android:text="name"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_page_toolbar"
+            android:text="Logout"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_back"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dataView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/btnLogout" />
+
+    </LinearLayout>
+</RelativeLayout>
